@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montepardo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" type="image/png" href="giphy.gif">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            background: url('fondo_desktop.2.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        /* Cambia el fondo en dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            body {
+                background: url('fondo_mobile.3.jpg') no-repeat center center fixed;
+                background-size: cover;
+            }
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 50px 20px;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-top: 60px;
+        }
+        .social-icons img {
+            width: 80px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .social-icons:hover
+
+        .gif-container img {
+            width: 150px;
+            animation: fadeInOut 2s infinite alternate;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .header img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .spotify text-center h2{
+            margin-bottom: 200px;
+        }
+        .image-text-float img {
+            float: center;
+            margin-right: 20px;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top:50px;
+        }
+        .image-text-float h1 {
+            text-align: center;
+            margin-bottom: 500px;
+        }
+        .content-text-center img {
+            max-width: 250px;
+        }
+        .custom-input {
+            width: 100%;
+            max-width: 750px;
+            padding: 12px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: left;
+            display: block;
+            margin: 10px auto;
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+        }
+        .custom-input::placeholder {
+            color: #777;
+        }
+        .custom-button {
+            width: 800px;
+            height: 200px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+            background: url('botones_sus-03.png') no-repeat center center;
+            background-size: contain;
+            text-indent: -9999px; /* Oculta el texto */
+            transition: background 0.2s ease-in-out;
+        }
+        .custom-button:hover {
+            background: url('botones_sus-02.png') no-repeat center center;
+            background-size: contain;
+        }
+        .custom-button:active {
+            background: url('botones_sus-01.png') no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background"></div>
+    <header class="header text-center mt-5">
+        <img src="Logo_montepardo.png" alt="Logo de la Banda" id="band-logo">
+    </header>
+    
+    <section>
+        <div style="text-align: center; margin-top: 100px; margin-bottom: 100px;">
+        <h1>🌴🦥¡15.03.25!🐠🌴</h1>
+        </div>
+    </section>
+    <!-- Sección de Spotify / deshabilitada hasta cargar musica-->
+    <!--<section class="spotify text-center">
+        <h1 style="margin-top: 100px;" style="margin-bottom: 300px;"" style="font-size: 900px;">🌴🦥¡Ya casi inicia la cuenta regresiva!🐠🌴</h1>
+        <iframe style="margin-top:100px" style="border-radius:12px" src="https://open.spotify.com/embed/album/XXXXXX" width="300" height="380" frameborder="0" allowfullscreen></iframe>
+    </section>-->
+    
+    <!--Imagenes de contenido-->
+    <section>
+    <div class="content-text-center" id="ilustraciones" style="margin-left: 330px;" style="margin-top: 50px;"> 
+        <img src="rana_1.png" alt="rana_1" style="width: 200px;" style="margin-left: 200px;">
+        <img src="perro_1.png" alt="perro_1" style="width: 200px;">
+        <img src="guacamaya_1.png" alt="guacamaya_1" style="width: 250px;" style="margin-top: 500px;">
+        <img src="ocelote_1.png" alt="ocelote_1" style="width: 200px;">
+        <img src="perezoso_1.png" alt="perezoso_1" style="width: 200px;" style="align-self: center;"">
+    </div>
+    </section>
+    <!-- Sección de Newsletter -->
+    <section class="content text-center" data-aos="fade-up">
+        <h2>Dejanos tu correo</h2>
+        <p>Enterate de todo lo que estamos haciendo, estamos emocionados por compartir nuestro lanzamiento</p>
+        <form id="emailForm">
+            <input type="email" id="email" class="custom-input" placeholder="Tu correo electrónico">
+            <button type="submit" class="custom-button">Suscribirme</button>
+        </form>
+    </section>
+    <!-- Sección de Redes Sociales -->
+    <section class="content text-center" data-aos="fade-up">
+        <div class="social-icons">
+            <img src="Botones_redes-01.png" alt="tiktok" onclick="location.href='https://www.tiktok.com/@soymontepardo?_t=ZM-8uGALwLKbyv&_r=1'">
+            <img src="Botones_redes-02.png" alt="Instagram" onclick="location.href='https://www.instagram.com/soymontepardo?igsh=Y2NreTU5NGR3Njk2&utm_source=qr'">
+    </section>
+    
+    <footer class="text-center mt-5 p-4 bg-dark">
+        <p>&copy; 2025 Montepardo | Todos los derechos reservados </p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+     <script>
+        AOS.init();
+        gsap.from("#band-logo", { duration: 4.5, opacity: 0, scale: 0.3, ease: "elastic.out(1.6, 0.3)" });
+
+        // Efecto de movimiento del fondo
+        window.addEventListener("scroll", function() {
+            let scrollPosition = window.scrollY;
+            gsap.to("#background", { y: scrollPosition * 0.5, duration: 0.3, ease: "power1.out" });
+        });
+    </script>
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+        
+            if (!email) {
+                alert("Por favor, ingresa un correo válido.");
+                return;
+            }
+        
+            let formData = new FormData();
+            formData.append("email", email);
+        
+            fetch("https://script.google.com/macros/s/AKfycbzjbkUkGiQT6xYEKpTjjwtocZPl03p1NgSQCCavqvV296SJ_Ntb6r7nkBKbYXR2nj4/exec", {  // Reemplaza con la URL generada en Apps Script
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                document.getElementById("emailForm").reset();
+            })
+            .catch(error => {
+                console.error("Error al guardar el correo:", error);
+                alert("Hubo un error, intenta de nuevo.");
+            });
+        });
+        </script>
+</body>
+</html>
