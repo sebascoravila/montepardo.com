@@ -20,20 +20,19 @@
         }
         
         /* Cambia el fondo en dispositivos móviles */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 700px) {
             body {
                 background: url('fondo_mobile.3.jpg') no-repeat center center fixed;
                 background-size: cover;
             }
         }
-        
         .content {
             position: relative;
             z-index: 1;
             padding: 50px 20px;
             text-align: left;
             margin-bottom: 20px;
-            margin-top: 60px;
+            margin-top: 40px;
         }
         .social-icons img {
             width: 80px;
@@ -90,17 +89,29 @@
             color: #777;
         }
         .custom-button {
-            width: 800px;
-            height: 200px;
-            border: none;
-            cursor: pointer;
-            display: block;
-            margin: 10px auto;
-            background: url('botones_sus-03.png') no-repeat center center;
-            background-size: contain;
-            text-indent: -9999px; /* Oculta el texto */
-            transition: background 0.2s ease-in-out;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 4 / 1.4; /* Mantiene la proporción del botón */
+    cursor: pointer;
+    border: none;
+    display: block;
+    margin: 15px auto;
+    background: url('botones_sus-03.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px; /* Oculta el texto */
+    transition: background 0.2s ease-in-out;
         }
+        /* Ajustes para móviles */
+@media screen and (max-width: 700px) {
+    .custom-button {
+        max-width: 85%;
+        height: 70%;
+        background-size: contain;
+        background-size: 50% auto; /* Asegura que el fondo se ajuste bien */
+        margin: 8px auto; /* Centra el botón */
+        }
+        }       
         .custom-button:hover {
             background: url('botones_sus-02.png') no-repeat center center;
             background-size: contain;
@@ -129,13 +140,9 @@
     </section>-->
     
     <!--Imagenes de contenido-->
-    <section>
-    <div class="content-text-center" id="ilustraciones" style="margin-left: 330px;" style="margin-top: 50px;"> 
-        <img src="rana_1.png" alt="rana_1" style="width: 200px;" style="margin-left: 200px;">
-        <img src="perro_1.png" alt="perro_1" style="width: 200px;">
+    <!--<section>
+    <div class="content-text-center" id="ilustraciones" style="margin-left: px;" style="margin-top: 50px;"> 
         <img src="guacamaya_1.png" alt="guacamaya_1" style="width: 250px;" style="margin-top: 500px;">
-        <img src="ocelote_1.png" alt="ocelote_1" style="width: 200px;">
-        <img src="perezoso_1.png" alt="perezoso_1" style="width: 200px;" style="align-self: center;"">
     </div>
     </section>
     <!-- Sección de Newsletter -->
